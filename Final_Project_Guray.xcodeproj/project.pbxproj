@@ -14,6 +14,14 @@
 		CA0FDF5628064EE7006AF153 /* Final_Project_Guray.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF5428064EE7006AF153 /* Final_Project_Guray.xcdatamodeld */; };
 		CA0FDF5828064EEB006AF153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0FDF5728064EEB006AF153 /* Assets.xcassets */; };
 		CA0FDF5B28064EEB006AF153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0FDF5928064EEB006AF153 /* LaunchScreen.storyboard */; };
+		CA0FDF632806584E006AF153 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF622806584E006AF153 /* NetworkService.swift */; };
+		CA0FDF652806594D006AF153 /* ModelClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF642806594D006AF153 /* ModelClasses.swift */; };
+		CA0FDF672808C785006AF153 /* FavouriteCounrtyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF662808C785006AF153 /* FavouriteCounrtyListVC.swift */; };
+		CA0FDF692808D000006AF153 /* cellForTodaysDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */; };
+		CA0FDF6D2808F513006AF153 /* cellForCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */; };
+		CA0FDF6F2808F94A006AF153 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */; };
+		CA0FDF712808FC6D006AF153 /* fromCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */; };
+		CA0FDF732809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		CA0FDF5728064EEB006AF153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0FDF5A28064EEB006AF153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0FDF5C28064EEB006AF153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0FDF622806584E006AF153 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CA0FDF642806594D006AF153 /* ModelClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClasses.swift; sourceTree = "<group>"; };
+		CA0FDF662808C785006AF153 /* FavouriteCounrtyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCounrtyListVC.swift; sourceTree = "<group>"; };
+		CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForTodaysDataTableViewCell.swift; sourceTree = "<group>"; };
+		CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForCountryTableViewCell.swift; sourceTree = "<group>"; };
+		CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fromCountryVC.swift; sourceTree = "<group>"; };
+		CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForhistoricalDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,14 @@
 				CA0FDF5928064EEB006AF153 /* LaunchScreen.storyboard */,
 				CA0FDF5C28064EEB006AF153 /* Info.plist */,
 				CA0FDF5428064EE7006AF153 /* Final_Project_Guray.xcdatamodeld */,
+				CA0FDF622806584E006AF153 /* NetworkService.swift */,
+				CA0FDF642806594D006AF153 /* ModelClasses.swift */,
+				CA0FDF662808C785006AF153 /* FavouriteCounrtyListVC.swift */,
+				CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */,
+				CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */,
+				CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */,
+				CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */,
+				CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */,
 			);
 			path = Final_Project_Guray;
 			sourceTree = "<group>";
@@ -141,10 +165,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0FDF632806584E006AF153 /* NetworkService.swift in Sources */,
 				CA0FDF5028064EE7006AF153 /* ViewController.swift in Sources */,
+				CA0FDF6F2808F94A006AF153 /* CoreDataService.swift in Sources */,
 				CA0FDF4C28064EE7006AF153 /* AppDelegate.swift in Sources */,
+				CA0FDF672808C785006AF153 /* FavouriteCounrtyListVC.swift in Sources */,
+				CA0FDF712808FC6D006AF153 /* fromCountryVC.swift in Sources */,
 				CA0FDF5628064EE7006AF153 /* Final_Project_Guray.xcdatamodeld in Sources */,
+				CA0FDF6D2808F513006AF153 /* cellForCountryTableViewCell.swift in Sources */,
+				CA0FDF652806594D006AF153 /* ModelClasses.swift in Sources */,
+				CA0FDF732809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift in Sources */,
 				CA0FDF4E28064EE7006AF153 /* SceneDelegate.swift in Sources */,
+				CA0FDF692808D000006AF153 /* cellForTodaysDataTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
