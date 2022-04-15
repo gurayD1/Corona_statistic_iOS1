@@ -7,14 +7,49 @@
 
 import UIKit
 
-class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var labelForCountryName: UILabel!
     @IBOutlet weak var countryListTable: UITableView!
     @IBOutlet weak var countryDataTable: UITableView!
     var todaysData : Country3 = Country3()
     @IBOutlet weak var countryResultTable: UITableView!
+    
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        if searchText.count == 0{
+            // updateTable()
+        }else {
+            let foundCountry = CoreDataService.shared.getCountryStartWith(text: searchText)
+            if(!foundCountry.isEmpty){
+          let num2 =  CoreDataService.shared.getAllCounrtyFromStorage().firstIndex(of: foundCountry[0])
+            
+            if(num2 != nil){
+            let indexPath = IndexPath(row: num2!, section: 0)
+            countryListTable.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+                countryListTable.delegate?.tableView!(countryListTable, didSelectRowAt: indexPath)}
+
+            }
+            
+//            let num = countryList2.firstIndex(where: {$0.country.localizedCaseInsensitiveContains(searchText)})
+//            if (num != nil){
+//                countryPicker.selectRow(num!, inComponent: 0, animated: true)
+//
+//                let countryName : String = countryList2[num!].countryInfo.iso2!;
+//
+//                getInformation( country_name : countryName)
+//
+//
+//            }
+            
+            
+            
+        
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(tableView.tag == 3){
@@ -34,7 +69,7 @@ class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableView
                 cell.label2.text = String(todaysData.deaths);
                 cell.label3.text = String(todaysData.active);
                 
-               
+                
                 
             }
             if(indexPath.section == 1){
@@ -66,8 +101,8 @@ class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-           // tableView.deleteRows(at: [indexPath], with: .fade)
-          let  myfavouriteCountry : MyFavouriteCountry =  CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row]
+            // tableView.deleteRows(at: [indexPath], with: .fade)
+            let  myfavouriteCountry : MyFavouriteCountry =  CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row]
             CoreDataService.shared.deleteFromStorage(favouriteCountry: myfavouriteCountry)
             countryListTable.reloadData()
             
@@ -106,17 +141,17 @@ class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableView
         let headerText = UILabel()
         headerText.textAlignment = .center
         if(tableView.tag == 3){
-        if(section == 0){
-            headerText.text = "Total Cases - Deaths and Active Cases"
+            if(section == 0){
+                headerText.text = "Total Cases - Deaths and Active Cases"
+                
+                
+            }
             
             
-        }
-            
-            
-        if(section == 1){
-            headerText.text =  "Today's Cases - Deaths and Recovered "
-            
-        }
+            if(section == 1){
+                headerText.text =  "Today's Cases - Deaths and Recovered "
+                
+            }
         }
         if(tableView.tag == 4){
             headerText.text =  "Country Name and Population"
@@ -128,40 +163,42 @@ class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-       // let flag = CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row].flag;
+        // let flag = CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row].flag;
         
         
-//        NetworkService.Shared.getImage(url: flag!, completionHandler: {result in
-//            switch result{
-//            case .success(let myImage):
-//                DispatchQueue.main.async {
-//                    self.imageView.image = myImage
-//                }
-//                break
-//            case .failure(_):
-//                break
-//            }
-//            
-//            
-//        })
+        //        NetworkService.Shared.getImage(url: flag!, completionHandler: {result in
+        //            switch result{
+        //            case .success(let myImage):
+        //                DispatchQueue.main.async {
+        //                    self.imageView.image = myImage
+        //                }
+        //                break
+        //            case .failure(_):
+        //                break
+        //            }
+        //
+        //
+        //        })
         
         if(tableView.tag == 4){
+            
+          
             let country_name = CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row].country;
             let flag = CoreDataService.shared.getAllCounrtyFromStorage()[indexPath.row].flag;
-            
-                    NetworkService.Shared.getImage(url: flag!, completionHandler: {result in
-                        switch result{
-                        case .success(let myImage):
-                            DispatchQueue.main.async {
-                                self.imageView.image = myImage
-                            }
-                            break
-                        case .failure(_):
-                            break
-                        }
-            
-            
-                    })
+            labelForCountryName.text = country_name
+            NetworkService.Shared.getImage(url: flag!, completionHandler: {result in
+                switch result{
+                case .success(let myImage):
+                    DispatchQueue.main.async {
+                        self.imageView.image = myImage
+                    }
+                    break
+                case .failure(_):
+                    break
+                }
+                
+                
+            })
             
             
             
@@ -179,7 +216,13 @@ class FavouriteCounrtyListVC: UIViewController, UITableViewDelegate, UITableView
                     print(error)
                     break
                 }
-            })}}
+            }
+                                                         
+            )
+            
+        }
+        
+    }
     
     
     

@@ -129,11 +129,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Ww-oW-4Tf">
-                                <rect key="frame" x="0.0" y="103" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="5Ww-oW-4Tf" secondAttribute="height" multiplier="207:125" id="JDu-xJ-T5O"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="46" id="CqA-Gp-nr7" customClass="cellForTodaysDataTableViewCell" customModule="Final_Project_Guray" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="46"/>
@@ -185,15 +182,9 @@
                                     <outlet property="delegate" destination="3CL-v9-XJH" id="PEo-DZ-tPv"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-kt-HxL">
-                                <rect key="frame" x="50" y="373" width="314" height="123"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" tag="4" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hoq-WI-FPL">
-                                <rect key="frame" x="0.0" y="516" width="414" height="326"/>
+                                <rect key="frame" x="0.0" y="570" width="414" height="272"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Hoq-WI-FPL" secondAttribute="height" multiplier="207:163" id="VQW-02-Os4"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="3aU-O5-rzc" customClass="cellForCountryTableViewCell" customModule="Final_Project_Guray" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="21"/>
@@ -238,20 +229,44 @@
                                     <outlet property="delegate" destination="3CL-v9-XJH" id="Zhf-ML-aab"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5LV-PT-bmS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3CL-v9-XJH" id="A8B-ca-MJt"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKS-M6-dgd">
+                                <rect key="frame" x="174.5" y="397" width="65.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-kt-HxL">
+                                <rect key="frame" x="50" y="432" width="314" height="123"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3LT-TD-ehD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="top" secondItem="3LT-TD-ehD" secondAttribute="top" constant="15" id="0Ko-SE-k4y"/>
-                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="top" secondItem="5Ww-oW-4Tf" secondAttribute="bottom" constant="20" id="7eK-pI-UY8"/>
-                            <constraint firstItem="3LT-TD-ehD" firstAttribute="trailing" secondItem="BhZ-kt-HxL" secondAttribute="trailing" constant="50" id="Gbu-wL-3bW"/>
-                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="top" secondItem="BhZ-kt-HxL" secondAttribute="bottom" constant="20" id="H1o-jv-MZA"/>
-                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" constant="50" id="HPL-gL-i1c"/>
-                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="trailing" secondItem="3LT-TD-ehD" secondAttribute="trailing" id="hst-03-XuK"/>
-                            <constraint firstItem="3LT-TD-ehD" firstAttribute="bottom" secondItem="Hoq-WI-FPL" secondAttribute="bottom" constant="20" id="mRw-fh-kbx"/>
-                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="trailing" secondItem="3LT-TD-ehD" secondAttribute="trailing" id="mke-jX-QN2"/>
-                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" id="tDM-8H-Q5D"/>
-                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" id="wVq-7s-HPD"/>
+                            <constraint firstItem="VKS-M6-dgd" firstAttribute="centerX" secondItem="Q1p-aN-WTr" secondAttribute="centerX" id="0Ot-se-v4M"/>
+                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="trailing" secondItem="3LT-TD-ehD" secondAttribute="trailing" id="2v6-nu-7lB"/>
+                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="top" secondItem="VKS-M6-dgd" secondAttribute="bottom" constant="5" id="4FS-Vh-ARH"/>
+                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="trailing" secondItem="3LT-TD-ehD" secondAttribute="trailing" id="7ZI-yI-E5Z"/>
+                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" id="9hO-wo-8lV"/>
+                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="height" secondItem="Q1p-aN-WTr" secondAttribute="height" multiplier="0.137277" id="C3F-iG-uUx"/>
+                            <constraint firstItem="3LT-TD-ehD" firstAttribute="trailing" secondItem="BhZ-kt-HxL" secondAttribute="trailing" constant="50" id="F7e-rr-ooR"/>
+                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="height" secondItem="Q1p-aN-WTr" secondAttribute="height" multiplier="0.303571" id="FN4-GD-aGu"/>
+                            <constraint firstItem="3LT-TD-ehD" firstAttribute="bottom" secondItem="Hoq-WI-FPL" secondAttribute="bottom" constant="20" id="Ste-Ns-yIp"/>
+                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="height" secondItem="Q1p-aN-WTr" secondAttribute="height" multiplier="0.279018" id="Wso-0Z-s8W"/>
+                            <constraint firstItem="5LV-PT-bmS" firstAttribute="top" secondItem="3LT-TD-ehD" secondAttribute="top" id="ZGA-IP-euy"/>
+                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" id="bqj-MF-mAD"/>
+                            <constraint firstItem="5LV-PT-bmS" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" id="i1c-qN-IZy"/>
+                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="centerX" secondItem="Q1p-aN-WTr" secondAttribute="centerX" id="jwg-iq-L9c"/>
+                            <constraint firstItem="BhZ-kt-HxL" firstAttribute="leading" secondItem="3LT-TD-ehD" secondAttribute="leading" constant="50" id="lsD-8a-qRU"/>
+                            <constraint firstItem="5Ww-oW-4Tf" firstAttribute="top" secondItem="5LV-PT-bmS" secondAttribute="bottom" id="rLy-g0-H8o"/>
+                            <constraint firstItem="5LV-PT-bmS" firstAttribute="trailing" secondItem="3LT-TD-ehD" secondAttribute="trailing" id="sah-eM-Uzj"/>
+                            <constraint firstItem="Hoq-WI-FPL" firstAttribute="top" secondItem="BhZ-kt-HxL" secondAttribute="bottom" constant="15" id="xbX-I1-mVy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gQZ-7j-SvM"/>
@@ -260,11 +275,12 @@
                         <outlet property="countryListTable" destination="Hoq-WI-FPL" id="KjW-k4-UXb"/>
                         <outlet property="countryResultTable" destination="5Ww-oW-4Tf" id="a2O-sY-tEG"/>
                         <outlet property="imageView" destination="BhZ-kt-HxL" id="AjT-I3-aRB"/>
+                        <outlet property="labelForCountryName" destination="VKS-M6-dgd" id="CsQ-45-n23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFI-Iu-0Np" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788.4057971014495" y="103.79464285714285"/>
+            <point key="canvasLocation" x="1617" y="105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OsW-83-aHa">

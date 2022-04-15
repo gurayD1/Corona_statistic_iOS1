@@ -39,6 +39,25 @@ class CoreDataService{
         return result
     }
     
+    func getCountryStartWith(text: String)->[MyFavouriteCountry] {
+          
+          var result = [MyFavouriteCountry]()
+          let fetchRequest = MyFavouriteCountry.fetchRequest()
+         // fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
+          
+          fetchRequest.predicate = NSPredicate(format: "country BEGINSWITH [c] %@ " ,text as CVarArg)
+         
+          // where id = ''
+          //NSPredicate(format: "num >= %d " , 3)
+          
+          do{
+           result = try  persistentContainer.viewContext.fetch(fetchRequest) as [MyFavouriteCountry]
+          }catch {
+              print(error)
+          }
+          return result
+      }
+    
     func deleteFromStorage(favouriteCountry: MyFavouriteCountry){
         persistentContainer.viewContext.delete(favouriteCountry)
         saveContext()
