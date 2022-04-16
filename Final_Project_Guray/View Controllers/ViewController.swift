@@ -153,9 +153,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // when user select a date from the date picker
     @objc func datePickerValueChanged(picker: UIDatePicker)  {
         let todayDate = Date();
+        
+        let modifiedDate = Calendar.current.date(byAdding: .day, value: -1, to: todayDate)!
+        
+        
         // if user select a day in future, the date picker will be set for the current day
-        if(todayDate < date_picker.date){
-            date_picker.setDate(todayDate, animated: true)
+        if(modifiedDate < date_picker.date){
+            date_picker.setDate(modifiedDate, animated: true)
         }
         let indexNumber : Int = countryPicker.selectedRow(inComponent: 0)
         

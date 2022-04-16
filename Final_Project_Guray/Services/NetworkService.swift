@@ -52,8 +52,10 @@ class NetworkService {
     func getTodayDataForCountry(countryName : String,
                                 completionHandler : @escaping (Result <Country3, Error>)->Void )  {
         let url = "https://disease.sh/v3/covid-19/countries/\(countryName)";
-        
-        let urlObj = URL(string: url)!
+    
+        guard let urlObj = URL(string: url) else{
+           return
+        }
         
         let task = URLSession.shared.dataTask(with: urlObj)
         { data, response, error in
