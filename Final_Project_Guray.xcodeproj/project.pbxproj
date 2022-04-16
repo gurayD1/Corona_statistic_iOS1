@@ -20,7 +20,6 @@
 		CA0FDF692808D000006AF153 /* cellForTodaysDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */; };
 		CA0FDF6D2808F513006AF153 /* cellForCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */; };
 		CA0FDF6F2808F94A006AF153 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */; };
-		CA0FDF712808FC6D006AF153 /* fromCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */; };
 		CA0FDF732809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForTodaysDataTableViewCell.swift; sourceTree = "<group>"; };
 		CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForCountryTableViewCell.swift; sourceTree = "<group>"; };
 		CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fromCountryVC.swift; sourceTree = "<group>"; };
 		CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellForhistoricalDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,22 +74,53 @@
 			children = (
 				CA0FDF4B28064EE7006AF153 /* AppDelegate.swift */,
 				CA0FDF4D28064EE7006AF153 /* SceneDelegate.swift */,
-				CA0FDF4F28064EE7006AF153 /* ViewController.swift */,
 				CA0FDF5128064EE7006AF153 /* Main.storyboard */,
 				CA0FDF5728064EEB006AF153 /* Assets.xcassets */,
 				CA0FDF5928064EEB006AF153 /* LaunchScreen.storyboard */,
 				CA0FDF5C28064EEB006AF153 /* Info.plist */,
 				CA0FDF5428064EE7006AF153 /* Final_Project_Guray.xcdatamodeld */,
-				CA0FDF622806584E006AF153 /* NetworkService.swift */,
-				CA0FDF642806594D006AF153 /* ModelClasses.swift */,
-				CA0FDF662808C785006AF153 /* FavouriteCounrtyListVC.swift */,
-				CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */,
-				CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */,
-				CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */,
-				CA0FDF702808FC6D006AF153 /* fromCountryVC.swift */,
-				CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */,
+				CA0FDF77280A3D96006AF153 /* Services */,
+				CA0FDF78280A3DA4006AF153 /* Models */,
+				CA0FDF75280A3D48006AF153 /* View Controllers */,
+				CA0FDF76280A3D78006AF153 /* VievCells */,
 			);
 			path = Final_Project_Guray;
+			sourceTree = "<group>";
+		};
+		CA0FDF75280A3D48006AF153 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA0FDF4F28064EE7006AF153 /* ViewController.swift */,
+				CA0FDF662808C785006AF153 /* FavouriteCounrtyListVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CA0FDF76280A3D78006AF153 /* VievCells */ = {
+			isa = PBXGroup;
+			children = (
+				CA0FDF722809DCE7006AF153 /* cellForhistoricalDataTableViewCell.swift */,
+				CA0FDF682808D000006AF153 /* cellForTodaysDataTableViewCell.swift */,
+				CA0FDF6C2808F513006AF153 /* cellForCountryTableViewCell.swift */,
+			);
+			path = VievCells;
+			sourceTree = "<group>";
+		};
+		CA0FDF77280A3D96006AF153 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CA0FDF622806584E006AF153 /* NetworkService.swift */,
+				CA0FDF6E2808F94A006AF153 /* CoreDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CA0FDF78280A3DA4006AF153 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA0FDF642806594D006AF153 /* ModelClasses.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +199,6 @@
 				CA0FDF6F2808F94A006AF153 /* CoreDataService.swift in Sources */,
 				CA0FDF4C28064EE7006AF153 /* AppDelegate.swift in Sources */,
 				CA0FDF672808C785006AF153 /* FavouriteCounrtyListVC.swift in Sources */,
-				CA0FDF712808FC6D006AF153 /* fromCountryVC.swift in Sources */,
 				CA0FDF5628064EE7006AF153 /* Final_Project_Guray.xcdatamodeld in Sources */,
 				CA0FDF6D2808F513006AF153 /* cellForCountryTableViewCell.swift in Sources */,
 				CA0FDF652806594D006AF153 /* ModelClasses.swift in Sources */,
